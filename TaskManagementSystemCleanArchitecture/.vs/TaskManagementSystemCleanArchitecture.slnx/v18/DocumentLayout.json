@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Code\\TaskManagementSystemCleanArchitecture\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3FBA8931-912F-41F7-9833-AC0438179707}|Persistence\\Persistence.csproj|e:\\code\\taskmanagementsystemcleanarchitecture\\persistence\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FBA8931-912F-41F7-9833-AC0438179707}|Persistence\\Persistence.csproj|solutionrelative:persistence\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824FB975-63FB-498C-BF85-DA7F8D38DB59}|Domain\\Domain.csproj|e:\\code\\taskmanagementsystemcleanarchitecture\\domain\\entities\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824FB975-63FB-498C-BF85-DA7F8D38DB59}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{192B5D8E-DCC2-42A5-AC1E-855D0F86780D}|Application\\Application.csproj|e:\\code\\taskmanagementsystemcleanarchitecture\\application\\dtos\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{192B5D8E-DCC2-42A5-AC1E-855D0F86780D}|Application\\Application.csproj|solutionrelative:application\\dtos\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{192B5D8E-DCC2-42A5-AC1E-855D0F86780D}|Application\\Application.csproj|e:\\code\\taskmanagementsystemcleanarchitecture\\application\\dtos\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{192B5D8E-DCC2-42A5-AC1E-855D0F86780D}|Application\\Application.csproj|solutionrelative:application\\dtos\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{192B5D8E-DCC2-42A5-AC1E-855D0F86780D}|Application\\Application.csproj|e:\\code\\taskmanagementsystemcleanarchitecture\\application\\dtos\\authresponsedto.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{192B5D8E-DCC2-42A5-AC1E-855D0F86780D}|Application\\Application.csproj|solutionrelative:application\\dtos\\authresponsedto.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{192B5D8E-DCC2-42A5-AC1E-855D0F86780D}|Application\\Application.csproj|e:\\code\\taskmanagementsystemcleanarchitecture\\application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{192B5D8E-DCC2-42A5-AC1E-855D0F86780D}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824FB975-63FB-498C-BF85-DA7F8D38DB59}|Domain\\Domain.csproj|e:\\code\\taskmanagementsystemcleanarchitecture\\domain\\entities\\taskentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824FB975-63FB-498C-BF85-DA7F8D38DB59}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\taskentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824FB975-63FB-498C-BF85-DA7F8D38DB59}|Domain\\Domain.csproj|e:\\code\\taskmanagementsystemcleanarchitecture\\domain\\entities\\taskuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824FB975-63FB-498C-BF85-DA7F8D38DB59}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\taskuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824FB975-63FB-498C-BF85-DA7F8D38DB59}|Domain\\Domain.csproj|e:\\code\\taskmanagementsystemcleanarchitecture\\domain\\entities\\identity\\applicationrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824FB975-63FB-498C-BF85-DA7F8D38DB59}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\identity\\applicationrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824FB975-63FB-498C-BF85-DA7F8D38DB59}|Domain\\Domain.csproj|e:\\code\\taskmanagementsystemcleanarchitecture\\domain\\entities\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824FB975-63FB-498C-BF85-DA7F8D38DB59}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{824FB975-63FB-498C-BF85-DA7F8D38DB59}|Domain\\Domain.csproj|e:\\code\\taskmanagementsystemcleanarchitecture\\domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{824FB975-63FB-498C-BF85-DA7F8D38DB59}|Domain\\Domain.csproj|solutionrelative:domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FBA8931-912F-41F7-9833-AC0438179707}|Persistence\\Persistence.csproj|e:\\code\\taskmanagementsystemcleanarchitecture\\persistence\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FBA8931-912F-41F7-9833-AC0438179707}|Persistence\\Persistence.csproj|solutionrelative:persistence\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{192B5D8E-DCC2-42A5-AC1E-855D0F86780D}|Application\\Application.csproj|e:\\code\\taskmanagementsystemcleanarchitecture\\application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{192B5D8E-DCC2-42A5-AC1E-855D0F86780D}|Application\\Application.csproj|solutionrelative:application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Persistence\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Persistence\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Persistence\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Persistence\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwCsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T17:50:23.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Application\\DTOs\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\RegisterRequest.cs",
+              "ToolTip": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Application\\DTOs\\RegisterRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T10:42:59.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Application\\DTOs\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\LoginRequest.cs",
+              "ToolTip": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Application\\DTOs\\LoginRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T10:42:59.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Domain\\Entities\\Identity\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Identity\\ApplicationUser.cs",
+              "ToolTip": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Domain\\Entities\\Identity\\ApplicationUser.cs",
+              "RelativeToolTip": "Domain\\Entities\\Identity\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T07:58:32.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Application\\DTOs\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\AuthResponseDto.cs",
+              "ToolTip": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Application\\DTOs\\AuthResponseDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\AuthResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T10:43:00.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Application\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IAuthService.cs",
+              "ToolTip": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Application\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T10:13:05.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Status.cs",
+              "DocumentMoniker": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Domain\\Entities\\Status.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Status.cs",
+              "ToolTip": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Domain\\Entities\\Status.cs",
+              "RelativeToolTip": "Domain\\Entities\\Status.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T08:01:17.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TaskUser.cs",
+              "DocumentMoniker": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Domain\\Entities\\TaskUser.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\TaskUser.cs",
+              "ToolTip": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Domain\\Entities\\TaskUser.cs",
+              "RelativeToolTip": "Domain\\Entities\\TaskUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T08:00:34.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationRole.cs",
+              "DocumentMoniker": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Domain\\Entities\\Identity\\ApplicationRole.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Identity\\ApplicationRole.cs",
+              "ToolTip": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Domain\\Entities\\Identity\\ApplicationRole.cs",
+              "RelativeToolTip": "Domain\\Entities\\Identity\\ApplicationRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T07:59:51.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TaskEntity.cs",
+              "DocumentMoniker": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Domain\\Entities\\TaskEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\TaskEntity.cs",
+              "ToolTip": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Domain\\Entities\\TaskEntity.cs",
+              "RelativeToolTip": "Domain\\Entities\\TaskEntity.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T07:55:10.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Domain\\Class1.cs",
+              "RelativeDocumentMoniker": "Domain\\Class1.cs",
+              "ToolTip": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Domain\\Class1.cs",
+              "RelativeToolTip": "Domain\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T07:44:01.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Persistence\\Class1.cs",
+              "RelativeDocumentMoniker": "Persistence\\Class1.cs",
+              "ToolTip": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Persistence\\Class1.cs",
+              "RelativeToolTip": "Persistence\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T07:43:45.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Application\\Class1.cs",
+              "RelativeDocumentMoniker": "Application\\Class1.cs",
+              "ToolTip": "E:\\Code\\TaskManagementSystemCleanArchitecture\\Application\\Class1.cs",
+              "RelativeToolTip": "Application\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T07:43:21.884Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
