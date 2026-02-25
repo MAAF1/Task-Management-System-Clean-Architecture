@@ -5,7 +5,6 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using Domain.Entities.Identity;
-
 namespace Domain.Entities
 {
     public class TaskUser

@@ -9,5 +9,6 @@ namespace Domain.Entities.Identity
 {
     public class ApplicationUser: IdentityUser<int>
     {
+        public ICollection<TaskUser> AssignedTasks { get; set; } = new List<TaskUser>();
     }
 }

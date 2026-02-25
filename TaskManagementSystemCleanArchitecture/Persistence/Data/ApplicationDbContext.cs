@@ -36,7 +36,7 @@ namespace Persistence.Data
             });
 
             builder.Entity<TaskUser>(e =>
-            {
+            {   
                 e.HasKey(tu => new { tu.TaskId, tu.UserId });
                 e.HasOne(tu => tu.Task).WithMany(t => t.AssignedUsers).HasForeignKey(tu => tu.TaskId).OnDelete(DeleteBehavior.Cascade);
 

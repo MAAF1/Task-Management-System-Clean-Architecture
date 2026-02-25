@@ -9,11 +9,9 @@ using Domain.Entities.Identity;
 
 namespace Domain.Entities
 {
-    public class TaskEntity
+    public class TaskEntity 
     {
         public int Id { get; set; }
-
-       
         public string Title { get; set; } = null!;
 
         public string? Description { get; set; }
@@ -22,8 +20,6 @@ namespace Domain.Entities
 
         public int CreatedById { get; set; } // FK to User
         public ApplicationUser CreatedBy { get; set; } = null!;
-
-        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
 
         public DateTime? DueDate { get; set; }
         public DateTime? ClosedDate { get; set; }

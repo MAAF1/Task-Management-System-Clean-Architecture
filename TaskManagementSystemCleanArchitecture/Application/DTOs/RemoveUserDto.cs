@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Application.DTOs
 {
-    public class LoginRequest
+    public class RemoveUserDto
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public List<int> UserIds { get; set; } = new();
     }
 }
