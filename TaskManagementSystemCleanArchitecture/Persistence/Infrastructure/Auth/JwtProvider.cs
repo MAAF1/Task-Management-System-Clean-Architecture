@@ -28,7 +28,7 @@ namespace Persistence.Infrastructure.Auth
         {
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                new Claim("uid", user.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName!),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email!)
             };

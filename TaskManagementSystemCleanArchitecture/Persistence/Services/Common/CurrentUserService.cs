@@ -16,7 +16,7 @@ namespace Persistence.Services.Common
         {
             _contextAccessor = contextAccessor;
         }
-        public string? UserId => _contextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
+        public string? UserId => _contextAccessor.HttpContext?.User?.FindFirstValue("uid");
 
         public string? Role => _contextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.Role);
     }

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Application.DTOs;
 using Application.DTOs.Auth;
 using AutoMapper;
+using Domain.Entities;
 using Domain.Entities.Identity;
 
 namespace Application.Mapping
@@ -14,7 +16,7 @@ namespace Application.Mapping
         public MappingProfile() 
         { 
             CreateMap<RegisterRequest, ApplicationUser>();
-            
+            CreateMap<CreateTaskDto, TaskEntity>();
 
 
 

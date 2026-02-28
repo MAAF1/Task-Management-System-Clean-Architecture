@@ -1,8 +1,10 @@
-﻿using Application.Contracts.Services;
+﻿using System.Reflection;
+using Application.Contracts.Services;
+using Application.Features.Tasks;
 using Application.Options.Jwt;
+using FluentValidation;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
 namespace Application
 {
     public static class ApplicationServices
@@ -12,6 +14,8 @@ namespace Application
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ApplicationServices).Assembly));
             services.AddAutoMapper(cfg => cfg.AddMaps(typeof(ApplicationServices).Assembly));
             services.Configure<JwtOptions>(configuration.GetSection("JwtOptions"));
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+            services.AddScoped<ITaskService, TaskService>();
             return services;
         }
     }

@@ -19,13 +19,14 @@ namespace Domain.Entities
         public Status Status { get; set; }
 
         public int CreatedById { get; set; } // FK to User
-        public ApplicationUser CreatedBy { get; set; } = null!;
+       
+        public DateTime CreatedAt { get; set; }
 
         public DateTime? DueDate { get; set; }
         public DateTime? ClosedDate { get; set; }
 
-       
 
+        public ApplicationUser CreatedBy { get; set; } = null!;
 
         public ICollection<TaskUser> AssignedUsers { get; set; } = new List<TaskUser>();
     }

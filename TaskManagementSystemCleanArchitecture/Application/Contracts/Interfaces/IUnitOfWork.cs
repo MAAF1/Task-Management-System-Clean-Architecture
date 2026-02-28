@@ -8,7 +8,7 @@ namespace Application.Contracts.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {
-        IGenericRepository<TaskEntity> Tasks {  get; }
+        IGenericRepository<T> GenericRepository<T>() where T : class;
 
         Task<int> CompleteAsync();
     }

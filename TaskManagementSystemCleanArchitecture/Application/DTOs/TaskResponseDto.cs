@@ -16,7 +16,7 @@ namespace Application.DTOs
         public DateTime CreatedDate { get; set; }
         public DateTime? DueDate { get; set; }
 
-        // قائمة باليوزرز اللي شغالين على التاسك وتفاصيلهم فيها
+      
         public List<AssignedUserDto> AssignedUsers { get; set; } = new();
     }
 }

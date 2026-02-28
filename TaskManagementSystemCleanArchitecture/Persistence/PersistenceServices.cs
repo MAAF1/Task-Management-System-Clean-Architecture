@@ -1,4 +1,5 @@
 ﻿using Application.Common;
+using Application.Contracts.Interfaces;
 using Application.Contracts.Services;
 using Domain.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
@@ -7,8 +8,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Data;
 using Persistence.Infrastructure.Auth;
+using Persistence.Repositories.Common;
 using Persistence.Services;
 using Persistence.Services.Common;
+using System.Reflection;
 
 namespace Persistence
 {
@@ -22,6 +25,8 @@ namespace Persistence
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
 
+            
+
             services.AddIdentity<ApplicationUser, ApplicationRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
@@ -29,6 +34,9 @@ namespace Persistence
             services.AddScoped<IJwtProvider, JwtProvider>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<ICurrentUserService, CurrentUserService>();
+            services.AddHttpContextAccessor();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;
         }
     }
