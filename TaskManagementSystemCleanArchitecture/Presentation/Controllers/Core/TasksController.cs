@@ -2,11 +2,13 @@
 using Application.DTOs;
 using Application.Features.Tasks;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers.Core
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TasksController : ControllerBase
@@ -17,8 +19,8 @@ namespace Presentation.Controllers.Core
         {
             _taskService = taskService;
         }
-        
-        
+
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPost("AddTask")]
         public async Task<IActionResult> CreateTask([FromBody] CreateTaskDto dto)
         {
@@ -26,7 +28,7 @@ namespace Presentation.Controllers.Core
             return Ok(new { Message = message });
         }
 
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpGet("GetAllTasks")]
         public async Task<IActionResult> GetAllTasksAsync()
         {
@@ -35,7 +37,7 @@ namespace Presentation.Controllers.Core
             return Ok(response);
         }
 
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpGet("GetTaskById/{id}")]
         public async Task<IActionResult> GetTaskByIdAsync(int id)
         {
@@ -43,7 +45,7 @@ namespace Presentation.Controllers.Core
             return Ok(response);
         }
 
-
+        [Authorize(Roles = "SuperAdmin")]
         [HttpDelete("DeleteTask/{id}")]
         public async Task<IActionResult> DeleteTask(int id)
         {
@@ -51,7 +53,7 @@ namespace Presentation.Controllers.Core
             return Ok("Task deleted successfully");
         }
 
-
+        [Authorize(Roles = "SuperAdmin")]
         [HttpPut("UpdateTask/{id}")]
 
         public async Task<IActionResult> UpdateTask(int id, UpdateTaskDto dto)

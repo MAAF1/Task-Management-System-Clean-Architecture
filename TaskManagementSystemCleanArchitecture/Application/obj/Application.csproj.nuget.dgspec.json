@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\Application.csproj": {}
+    "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\Application.csproj": {}
   },
   "projects": {
-    "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\Application.csproj": {
+    "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\maafm\\.nuget\\packages\\",
-        "outputPath": "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\obj\\",
+        "projectPath": "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Mabdulghani\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\maafm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Mabdulghani\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Domain\\Domain.csproj": {
-                "projectPath": "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Domain\\Domain.csproj"
+              "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Domain\\Domain.csproj"
               }
             }
           }
@@ -42,13 +38,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "10.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -125,25 +115,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.118/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Domain\\Domain.csproj": {
+    "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\maafm\\.nuget\\packages\\",
-        "outputPath": "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Domain\\obj\\",
+        "projectPath": "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Mabdulghani\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\maafm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Mabdulghani\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -163,13 +149,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "10.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -246,7 +226,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.118/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

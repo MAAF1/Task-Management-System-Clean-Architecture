@@ -16,6 +16,8 @@ namespace Application
             services.Configure<JwtOptions>(configuration.GetSection("JwtOptions"));
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             services.AddScoped<ITaskService, TaskService>();
+            services.AddScoped<ITaskUserService, TaskUserService>();
+            services.AddScoped<ITaskAssignmentService, TaskAssignmentService>();
             return services;
         }
     }

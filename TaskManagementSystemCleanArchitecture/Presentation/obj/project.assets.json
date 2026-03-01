@@ -4682,24 +4682,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maafm\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Mabdulghani\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Presentation\\Presentation.csproj",
+      "projectUniqueName": "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Presentation\\Presentation.csproj",
       "projectName": "Presentation",
-      "projectPath": "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Presentation\\Presentation.csproj",
-      "packagesPath": "C:\\Users\\maafm\\.nuget\\packages\\",
-      "outputPath": "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Presentation\\obj\\",
+      "projectPath": "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Presentation\\Presentation.csproj",
+      "packagesPath": "C:\\Users\\Mabdulghani\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Presentation\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\maafm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Mabdulghani\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4713,11 +4708,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\Application.csproj": {
-              "projectPath": "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\Application.csproj"
+            "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\Application.csproj": {
+              "projectPath": "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Application\\Application.csproj"
             },
-            "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Persistence\\Persistence.csproj": {
-              "projectPath": "E:\\MySideProjects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Persistence\\Persistence.csproj"
+            "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Persistence\\Persistence.csproj": {
+              "projectPath": "D:\\Projects\\Task-Management-System-Clean-Architecture\\TaskManagementSystemCleanArchitecture\\Persistence\\Persistence.csproj"
             }
           }
         }
@@ -4726,13 +4721,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "10.0.100"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -4816,7 +4805,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.118/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
