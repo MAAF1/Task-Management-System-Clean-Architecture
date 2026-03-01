@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using Application.Contracts.Services;
 using Application.Features.Tasks;
+using Application.Features.Users;
 using Application.Options.Jwt;
 using FluentValidation;
 using Microsoft.Extensions.Configuration;
@@ -18,6 +19,7 @@ namespace Application
             services.AddScoped<ITaskService, TaskService>();
             services.AddScoped<ITaskUserService, TaskUserService>();
             services.AddScoped<ITaskAssignmentService, TaskAssignmentService>();
+            services.AddScoped<IUserService, UserService>();
             return services;
         }
     }
