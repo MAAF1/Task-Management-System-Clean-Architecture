@@ -85,12 +85,7 @@ namespace Application.Features.Tasks
 
         public async Task<TaskResponseDto> GetTaskByIdAsync(int id)
         {
-            var task = await _uow.GenericRepository<TaskEntity>().GetByIdWithIncludesAsync(id,
-                q => q
-        .Include(t => t.CreatedBy)
-        .Include(t => t.AssignedUsers)
-        .ThenInclude(tu => tu.User)
-               );
+            var task = await _uow.TaskRepository().GetByIdAsync(id);
 
             var response = new TaskResponseDto
             {
@@ -122,10 +117,7 @@ namespace Application.Features.Tasks
 
         public async Task<IEnumerable<TaskResponseDto>> GetTasksAsync(string? searchTerm = null)
         {
-            var tasks = await _uow.GenericRepository<TaskEntity>().GetAllWithIncludesAsync(q => q
-        .Include(t => t.CreatedBy)
-        .Include(t => t.AssignedUsers)
-        .ThenInclude(tu => tu.User));
+            var tasks = await _uow.TaskRepository().GetAllTasksAsync();
         
             var response = tasks.Select(task => new TaskResponseDto
             {

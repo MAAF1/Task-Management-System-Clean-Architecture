@@ -10,7 +10,7 @@ namespace Application.Contracts.Interfaces
 {
     public interface ITaskRepository : IGenericRepository<TaskEntity>
     {
-        Task<List<TaskResponseDto>> GetAllTasksAsync();
-        Task<TaskResponseDto> GetTaskById(int id);
+        Task<List<TaskEntity>> GetAllTasksAsync();
+        Task<TaskEntity> GetTaskById(int id);
     }
 }

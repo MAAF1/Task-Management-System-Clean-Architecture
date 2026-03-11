@@ -22,6 +22,7 @@ namespace Persistence.Repositories.Common
        
 
         public IGenericRepository<T> GenericRepository<T>() where T : class => new GenericRepository<T>(_context);
+        public ITaskRepository TaskRepository() => new TaskRepository(_context);
 
     }
 }
