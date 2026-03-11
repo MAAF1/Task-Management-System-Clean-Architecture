@@ -1,0 +1,48 @@
+<div class="dashboard-wrapper py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-end mb-5">
+      <div>
+        <h2 class="dashboard-title">Admin Dashboard</h2>
+        <p class="dashboard-subtitle">Manage and monitor all system tasks</p>
+      </div>
+      <div class="stats-badge">
+        <i class="bi bi-layers-half"></i>
+        Total Tasks: <span>{{ tasks.length }}</span>
+      </div>
+    </div>
+
+    @if(loading) {
+      <div class="loader-container">
+        <div class="custom-spinner"></div>
+        <p>Fetching global tasks...</p>
+      </div>
+    }
+
+    <div class="tasks-grid">
+      @for (task of tasks; track task.taskId) {
+        <div class="task-card-v2 {{task.status}}" 
+             (click)="authService.isSuperAdmin() ? openTask(task.taskId) : null">
+          
+          <div class="card-header-v2">
+            <span class="status-pill {{task.status}}">{{ task.status }}</span>
+            <span class="date-text"><i class="bi bi-calendar3"></i> {{ task.createdDate | date:'shortDate' }}</span>
+          </div>
+
+          <h5 class="task-title-v2">{{ task.title }}</h5>
+          <p class="task-desc-v2">{{ task.description || 'No description available for this task.' }}</p>
+
+          <div class="card-footer-v2">
+            <div class="user-avatar">
+               {{ task.createdByUserName.charAt(0).toUpperCase() }}
+            </div>
+            <div class="user-meta">
+              <span class="label">Created by</span>
+              <span class="name">{{ task.createdByUserName }}</span>
+            </div>
+            <i class="bi bi-chevron-right ms-auto arrow-icon"></i>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

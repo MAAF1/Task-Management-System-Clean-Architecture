@@ -30,28 +30,29 @@ namespace Persistence.Repositories.Common
 
         public async Task<IEnumerable<T>> GetAllAsync() => await _dbSet.ToListAsync();
         
-        public async Task<T> GetByIdWithIncludesAsync(int id, params Expression<Func<T, object>>[] includes)
+        public async Task<T> GetByIdWithIncludesAsync(int id, Func<IQueryable<T>, IQueryable<T>>? include = null)
         {
             IQueryable<T> query = _context.Set<T>();
 
-            
-            if (includes != null)
+
+           
+
+            if (include != null)
             {
-                query = includes.Aggregate(query, (current, include) => current.Include(include));
+                query = include(query);
             }
 
             return await query.FirstOrDefaultAsync(e => EF.Property<int>(e, "Id") == id);
         }
         public async Task<T> GetByIdAsync(int id) => await _dbSet.FindAsync(id);
 
-        public async Task<IEnumerable<T>> GetAllWithIncludesAsync(params Expression<Func<T, object>>[] includes)
+        public async Task<IEnumerable<T>> GetAllWithIncludesAsync(Func<IQueryable<T>, IQueryable<T>>? include = null)
         {
             IQueryable<T> query = _context.Set<T>();
 
-            
-            if (includes != null)
+            if (include != null)
             {
-                query = includes.Aggregate(query, (current, include) => current.Include(include));
+                query = include(query);
             }
 
             return await query.ToListAsync();

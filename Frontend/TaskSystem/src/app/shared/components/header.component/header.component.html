@@ -1,0 +1,124 @@
+<!-- <nav class="navbar navbar-expand-lg fixed-top px-4">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" routerLink="/">
+      <i class="bi bi-cpu-fill me-2"></i>TaskPro
+    </a>
+
+    <div class="ms-auto d-flex align-items-center">
+      
+      @if(authService.isLoggedIn()) {
+        <div class="d-flex align-items-center gap-3">
+          <span class="welcome-text d-none d-md-inline me-3">
+            Welcome, <strong>{{ username }}</strong>
+          </span>
+
+          <div class="header-actions d-flex gap-2">
+            @if(authService.isSuperAdmin() || authService.isAdmin()) {
+              <a routerLink="/admindashboard" class="btn btn-action btn-admin">Admin Dashboard</a>
+              <a routerLink="/createtask" class="btn btn-action btn-success-custom">Create Task</a>
+            }
+            @else if(authService.isUser()) {
+              <a routerLink="/dashboard" class="btn btn-action btn-admin">Dashboard</a>
+              <a routerLink="/task-details/1" class="btn btn-action btn-secondary-custom">My Tasks</a>
+            }
+            
+            <button class="btn-primary" (click)="logout()">
+              <i class="bi bi-box-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      } @else {
+        <div class="ms-auto">
+          <a routerLink="/login" class="btn-primary  ">Login</a>
+          <a routerLink="/register" class="btn-primary  ">Register</a>
+        </div>
+      }
+
+    </div> </div>
+</nav> -->
+
+<!-- <nav class="navbar navbar-expand-lg fixed-top px-4 shadow-sm bg-white">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" routerLink="/">
+      <i class="bi bi-cpu-fill"></i>
+      <span class="brand-task">Task</span><span class="brand-pro">Pro</span>
+    </a>
+
+    <div class="d-flex align-items-center gap-3">
+      @if(authService.isLoggedIn()) {
+        <span class="welcome-text d-none d-md-inline">
+          Welcome, <strong>{{ username }}</strong>
+        </span>
+
+        <div class="header-actions d-flex align-items-center gap-2">
+          @if(authService.isSuperAdmin() || authService.isAdmin()) {
+            <a routerLink="/admindashboard" class="btn btn-action btn-admin">Admin Dashboard</a>
+            <a routerLink="/createtask" class="btn btn-action btn-success-custom">Create Task</a>
+          } @else if(authService.isUser()) {
+            <a routerLink="/dashboard" class="btn btn-action btn-admin">Dashboard</a>
+            <a routerLink="/task-details/1" class="btn btn-action btn-secondary-custom">My Tasks</a>
+          }
+          
+          <button class="btn btn-logout" (click)="logout()">
+            <i class="bi bi-box-arrow-right"></i>
+          </button>
+        </div>
+      } @else {
+        <div class="d-flex gap-2">
+          <a routerLink="/login" class="btn btn-primary-custom">Login</a>
+          <a routerLink="/register" class="btn btn-outline-custom">Register</a>
+        </div>
+      }
+    </div> 
+  </div>
+</nav> -->
+
+<nav class="navbar"> <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      <i class="bi bi-cpu-fill"></i>
+      <span class="brand-task">Task</span><span class="brand-pro">Pro</span>
+    </a>
+
+    <div class="nav-right"> @if(authService.isLoggedIn()) {
+        <span class="welcome-text">
+          Welcome, <strong>{{ username }}</strong>
+        </span>
+
+        <div class="header-actions">
+          @if(authService.isSuperAdmin() || authService.isAdmin()) {
+            <a routerLink="/admindashboard"
+               routerLinkActive="is-active"
+               class="btn-switch"> Admin Dashboard </a>
+               
+            <a routerLink="/createtask"
+               routerLinkActive="is-active"
+               class="btn-switch"> Create Task </a>
+          } @else if(authService.isUser()) {
+            <a routerLink="/dashboard"
+               routerLinkActive="is-active"
+               class="btn-switch">
+               <i class="bi bi-grid-1x2-fill me-1"></i> Dashboard
+            </a>
+            
+            
+          }
+
+          
+
+          <button class="btn-logout-custom" (click)="logout()" title="Logout">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      }
+      
+       @else {
+        <div class="auth-buttons">
+          <a routerLink="/login" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" class="btn-switch">Login</a>
+          <a routerLink="/register" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" class="btn-switch">Register</a>
+        </div>
+      }
+    </div>
+  </div>
+</nav>

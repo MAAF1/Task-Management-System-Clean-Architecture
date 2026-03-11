@@ -19,25 +19,25 @@ namespace Presentation.Controllers.Core
             _taskAssignmentService = taskAssignmentService;
         }
         
-        [HttpPut("TaskAssignment/AssignUsers/{id}")]
+        [HttpPut("AssignUsers/{id}")]
         public async Task<IActionResult> AssignUsers(int id, AssignTaskDto dto)
         {
             var response = await _taskAssignmentService.AssignUsersToTaskAsync(id, dto);
 
             if(response)
                 return Ok("User Assigned Successfully");
-            else return BadRequest("Couldn't Assign User");
+            else return BadRequest("Couldn't assign user");
         }
 
 
-        [HttpPut("TaskAssignment/RemoveUsers/{id}")]
+        [HttpPut("RemoveUsers/{id}")]
         public async Task<IActionResult> RemoveUsers(int id, RemoveUserDto dto)
         {
             var response = await _taskAssignmentService.RemoveUsersFromTaskAsync(id, dto);
 
             if (response)
                 return Ok("User Removed Successfully");
-            else return BadRequest("Couldn't Assign User");
+            else return BadRequest("Couldn't remove user");
         }
 
     }

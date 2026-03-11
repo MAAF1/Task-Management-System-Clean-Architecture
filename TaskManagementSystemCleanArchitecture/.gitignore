@@ -5,3 +5,13 @@ bin/
 *.user
 *.suo
 *.shell_navigation_cache
+
+# Build Folders
+bin/
+obj/
+
+# Node / Frontend
+node_modules/
+dist/
+*.log
+package-lock.json

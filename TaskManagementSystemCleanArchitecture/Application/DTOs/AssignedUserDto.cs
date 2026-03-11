@@ -15,6 +15,8 @@ namespace Application.DTOs
        
         public string UserStatusInTask { get; set; } = null!; 
         public string? Feedback { get; set; }
+        
         public DateTime? AssignedDate { get; set; }
+        public DateTime? UserClosedDate { get; set; }
     }
 }

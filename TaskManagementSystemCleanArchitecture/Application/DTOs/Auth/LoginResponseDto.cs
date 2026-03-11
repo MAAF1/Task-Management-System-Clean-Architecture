@@ -12,6 +12,7 @@ namespace Application.DTOs.Auth
         public bool IsAuthenticated { get; set; }
         public string? Token { get; set; }
         public string? Username { get; set; }
+        public string role { get; set; }
        
     }
 }

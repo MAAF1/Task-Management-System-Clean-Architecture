@@ -1,0 +1,174 @@
+<!-- <div class="container py-4">
+  @if (task) {
+    <div class="card shadow-sm border-0 overflow-hidden">
+      <div class="card-header bg-white border-bottom py-3 d-flex justify-content-between align-items-center">
+        <h4 class="mb-0 fw-bold text-dark">{{ task.title }}</h4>
+        
+        <span class="badge rounded-pill" 
+              [ngClass]="{
+                'bg-success': task.userTaskStatus === 'Completed', 
+                'bg-warning text-dark': task.userTaskStatus === 'Pending', 
+                'bg-primary': task.userTaskStatus === 'InProgress'
+              }">
+          {{ task.userTaskStatus }}
+        </span>
+      </div>
+
+      <div class="card-body p-4">
+        <div class="row g-4">
+          <div class="col-md-8">
+            <label class="text-muted small fw-bold text-uppercase">Description</label>
+            <p class="text-secondary lh-base">{{ task.description || 'No description provided.' }}</p>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="p-3 bg-light rounded-3">
+              <div class="mb-2">
+                <i class="bi bi-calendar-event me-2 text-primary"></i>
+                <small class="text-muted">Due Date:</small>
+                <div class="fw-bold">{{ task.dueDate | date:'mediumDate' }}</div>
+              </div>
+
+              @if (task.userTaskClosedDate) {
+                <div class="text-success">
+                  <i class="bi bi-check-all me-2"></i>
+                  <small>Completed on:</small>
+                  <div class="fw-bold">{{ task.userTaskClosedDate | date:'mediumDate' }}</div>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+        <div class="row align-items-end">
+          <div class="col-md-8">
+            <label class="form-label fw-bold">Task Feedback / Notes</label>
+            <textarea 
+              name="feedback"
+  class="form-control border-0 bg-light" 
+  rows="3" 
+  [(ngModel)]="feedbackInput" 
+  placeholder="Enter your feedback or notes about this task here...">
+</textarea>
+
+          </div>
+          
+          <div class="col-md-4 mt-3 mt-md-0 d-grid gap-2">
+            <button class="btn btn-outline-primary shadow-sm" (click)="updateFeedback()">
+              <i class="bi bi-pencil-square me-1"></i> Update Notes
+            </button>
+
+            @if (task.userTaskStatus !== 'Completed') {
+              <button class="btn btn-success shadow-sm" (click)="completeTask()">
+                <i class="bi bi-check-circle me-1"></i> Mark as Complete
+              </button>
+            } 
+            @else {
+              <button class="btn btn-danger shadow-sm" (click)="uncompleteTask()">
+                <i class="bi bi-arrow-counterclockwise me-1"></i> Mark as Uncomplete
+              </button>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  } @else {
+    <div class="text-center py-5">
+      <div class="spinner-border text-primary mb-3"></div>
+      <p class="text-muted">Fetching task details...</p>
+    </div>
+  }
+</div> -->
+
+<div class="admin-detail-wrapper py-5">
+  <div class="container custom-form-container">
+    
+    @if (task) {
+      <div class="detail-header d-flex justify-content-between align-items-end mb-4">
+        <div>
+          
+          <h2 class="fw-bold m-0 text-dark">{{ task.title }}</h2>
+          <p class="text-muted small mt-1">
+            Current Status: 
+            <span class="badge rounded-pill px-3 py-1 shadow-sm ms-2" 
+                  [ngClass]="{'bg-success': task.userTaskStatus === 'Completed', 'bg-warning text-dark': task.userTaskStatus === 'Pending'}">
+              <i class="bi bi-circle-fill me-1" style="font-size: 0.5rem;"></i>
+              {{ task.userTaskStatus }}
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="glass-card p-4">
+            <h5 class="section-title mb-4 text-primary"><i class="bi bi-info-circle-fill"></i> Mission Details</h5>
+            
+            <div class="mb-4">
+              <label class="custom-label">Description</label>
+              <div class="custom-input bg-light" style="min-height: 180px; white-space: pre-wrap;">
+                {{ task.description || 'No description provided.' }}
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="custom-label">Timeline</label>
+              <div class="date-input-wrapper">
+                 <div class="custom-input d-flex align-items-center bg-light">
+                   <i class="bi bi-calendar3 text-primary me-3 fs-5"></i>
+                   <div>
+                     <small class="text-muted d-block" style="font-size: 0.7rem; font-weight: 700;">DUE DATE</small>
+                     <span class="fw-bold text-dark">{{ task.dueDate | date:'longDate' }}</span>
+                   </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="d-flex flex-column gap-4 h-100">
+            
+            <div class="glass-card p-4 border-top-success flex-fill">
+              <h6 class="section-title text-success mb-4"><i class="bi bi-pencil-square"></i> Your Progress Notes</h6>
+              
+              <div class="mb-4">
+                <label class="custom-label">Update Your Status</label>
+                <textarea 
+                  class="custom-input w-100" 
+                  style="height: 160px; max-width: 100% !important;" 
+                  [(ngModel)]="feedbackInput" 
+                  placeholder="What's the latest update on this mission?">
+                </textarea>
+              </div>
+
+              <button class="btn-save-main w-100 mb-3" (click)="updateFeedback()">
+                <i class="bi bi-cloud-arrow-up-fill me-2"></i> Save Progress Updates
+              </button>
+
+              <hr class="opacity-25 my-4">
+
+              @if (task.userTaskStatus !== 'Completed') {
+                <button class="btn-action-green w-100 py-3 shadow-sm" (click)="completeTask()">
+                  <i class="bi bi-check-all me-2 fs-5"></i> Mark Mission as Finished
+                </button>
+              } @else {
+                <button class="btn-action-red w-100 py-3 shadow-sm" (click)="uncompleteTask()">
+                  <i class="bi bi-arrow-counterclockwise me-2 fs-5"></i> Re-open Mission
+                </button>
+              }
+            </div>
+
+          </div>
+        </div>
+      </div>
+    } @else {
+      <div class="text-center py-5 mt-5">
+        <div class="spinner-border text-primary" role="status"></div>
+        <p class="text-muted mt-3 fw-bold">Downloading mission data...</p>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,95 @@
+
+.user-workspace-wrapper {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  margin-top: 75px; 
+}
+
+.workspace-header h1 {
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -1px;
+}
+
+
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.task-card-v2 {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-card-v2:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+  border-color: #4361ee;
+}
+
+/* الألوان حسب الـ Status */
+.task-card-v2.Pending { border-left: 6px solid #f59e0b; }
+.task-card-v2.InProgress { border-left: 6px solid #3b82f6; }
+.task-card-v2.Completed { border-left: 6px solid #10b981; }
+
+.card-header-v2 { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+
+/* الـ Status Pill الملون */
+.status-pill {
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.status-pill.Pending { background: #fef3c7; color: #d97706; }
+.status-pill.InProgress { background: #dbeafe; color: #2563eb; }
+.status-pill.Completed { background: #dcfce7; color: #059669; }
+
+.task-title-v2 { font-weight: 700; color: #1e293b; margin-bottom: 10px; }
+
+
+.task-desc-v2 {
+  color: #64748b;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 45px;
+}
+
+.card-footer-v2 {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-info { color: #94a3b8; font-size: 0.8rem; font-weight: 500; }
+.date-info i { color: #4361ee; }
+
+.action-link {
+  color: #4361ee;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: 0.2s;
+}
+
+.task-card-v2:hover .action-link {
+  transform: translateX(5px);
+}

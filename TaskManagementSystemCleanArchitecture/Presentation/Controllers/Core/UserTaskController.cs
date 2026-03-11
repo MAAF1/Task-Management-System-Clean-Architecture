@@ -21,7 +21,7 @@ namespace Presentation.Controllers.Core
             
         }
 
-        [HttpGet("UserTasks/Getmy-tasks")]
+        [HttpGet("Getmytasks")]
         public async Task<IActionResult> GetAllMyTasks()
         {
             var response = await _taskUserService.GetMyTasksAsync();
@@ -29,7 +29,7 @@ namespace Presentation.Controllers.Core
             return Ok(response);
         }
 
-        [HttpPut("UserTasks/CompleteTask/{id}")]
+        [HttpPut("CompleteTask/{id}")]
         public async Task<IActionResult> CompleteTask(int id)
         {
             var response = await _taskUserService.CompleteTaskAsync(id);
@@ -41,7 +41,7 @@ namespace Presentation.Controllers.Core
             return BadRequest("Task doesn't exist");
         }
 
-        [HttpPut("UserTasks/UncompleteTask/{id}")]
+        [HttpPut("UncompleteTask/{id}")]
         public async Task<IActionResult> UncompleteTask(int id)
         {
             var response = await _taskUserService.UncompleteTaskAsync(id);
@@ -53,7 +53,7 @@ namespace Presentation.Controllers.Core
             return BadRequest("Task doesn't exist");
         }
 
-        [HttpPut("UserTasks/WriteFeedback/{id}")]
+        [HttpPut("WriteFeedback/{id}")]
         public async Task<IActionResult> WriteFeedbackAsync(int id, FeedbackDto dto)
         {
             var response  = await _taskUserService.WriteFeedbackAsync(id, dto);

@@ -15,6 +15,7 @@ namespace Application.DTOs
         public string CreatedByUserName { get; set; } = null!; 
         public DateTime CreatedDate { get; set; }
         public DateTime? DueDate { get; set; }
+        public DateTime? CloseDate { get; set; }
 
       
         public List<AssignedUserDto> AssignedUsers { get; set; } = new();

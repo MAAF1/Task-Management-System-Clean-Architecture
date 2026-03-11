@@ -1,0 +1,33 @@
+.card {
+  border-radius: 12px;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+}
+
+.btn-primary {
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-weight: 500;
+  transition: all 0.3s;
+  background-color: #4361ee !important;
+  width: 5px;
+  margin-left: 10px !important;
+}
+.btn-primary:hover { background-color: #3f37c9; transform: translateY(-1px); }
+
+
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  padding: 12px;
+}
+
+.form-control:focus {
+  border-color: #4361ee;
+  box-shadow: 0 0 0 0.25 red; /* خفيفة جداً */
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+}

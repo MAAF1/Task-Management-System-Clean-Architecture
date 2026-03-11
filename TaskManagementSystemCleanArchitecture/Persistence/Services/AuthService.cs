@@ -31,19 +31,23 @@ namespace Persistence.Services
         public async Task<LoginResponseDto> LoginAsync(LoginRequest request)
         {
             var user = await _userManager.FindByEmailAsync(request.Email);
+            
 
             if(user is null || !await _userManager.CheckPasswordAsync(user, request.Password))
             {
                 return new LoginResponseDto { Message = "Invalid email or password" };
             }
-
+            var roles = await _userManager.GetRolesAsync(user);
+            var role = roles.FirstOrDefault();
             var token = await _jwtProvider.GenerateTokenAsync(user);
             return new LoginResponseDto
             {
                 Message = "Login successful",
                 IsAuthenticated = true,
                 Token = token,
-                Username = user.UserName
+                Username = user.UserName,
+                role = role
+                
             };
 
         }

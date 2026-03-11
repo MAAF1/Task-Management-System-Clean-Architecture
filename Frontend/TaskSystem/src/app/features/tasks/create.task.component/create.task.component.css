@@ -1,0 +1,68 @@
+/* استخدم نفس الـ CSS اللي فات مع تعديلات بسيطة للـ Create */
+
+.admin-detail-wrapper {
+  background: #f4f7fe;
+  min-height: 100vh;
+  margin-top: 75px; 
+}
+
+.custom-form-container {
+    max-width: 900px !important; /* خليناها 900 عشان دي فورم واحدة فتبقى ملمومة أكتر */
+    margin: 0 auto;
+}
+
+.glass-card {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  padding: 30px !important;
+}
+
+/* الأبعاد السحرية */
+.custom-input {
+  width: 100%;
+  max-width: 500px !important; /* العنوان والتاريخ هيبقوا ملمومين زي */
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  transition: 0.3s;
+}
+
+textarea.custom-input {
+    max-width: 100% !important; /* الديسكريبشن يفرش عادي */
+}
+
+.custom-select {
+  width: 100%;
+  max-width: 600px !important; /* السيلكت محتاجة مساحة شوية للأسامي */
+  height: 180px !important;
+  border-radius: 12px;
+  border: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+  padding: 10px;
+}
+
+.custom-label { 
+  font-size: 0.9rem; 
+  font-weight: 700; 
+  color: #475569; 
+  margin-bottom: 10px; 
+}
+
+.btn-save-main {
+  background: linear-gradient(45deg, #4361ee, #7209b7);
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+  transition: 0.3s;
+}
+
+.btn-save-main:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+}

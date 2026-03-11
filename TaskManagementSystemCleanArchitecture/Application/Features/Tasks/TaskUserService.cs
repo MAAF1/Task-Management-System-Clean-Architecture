@@ -5,6 +5,7 @@ using Application.DTOs;
 using Application.DTOs.UserTasks;
 using Domain.Entities;
 using Domain.Entities.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,14 +54,19 @@ namespace Application.Features.Tasks
             var user = await _uow.GenericRepository<ApplicationUser>().GetByIdAsync(currentUserId);
             if (user == null) return null;
             var userAssignments = await _uow.GenericRepository<TaskUser>().GetAllWithIncludesAsync(
-            tu => tu.Task,
-            tu => tu.Task.CreatedBy 
+            q => q
+            .Include(t => t.Task)
+            .ThenInclude(t => t.CreatedBy)
+            .Where(tu => tu.UserId == currentUserId)
+
+
+
             );
 
-            var myAssignments = userAssignments.Where(tu => tu.UserId == currentUserId);
+           
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                myAssignments = myAssignments.Where(tu =>
+               userAssignments = userAssignments.Where(tu =>
                     tu.Task.Title.Contains(searchTerm, StringComparison.OrdinalIgnoreCase));
             }
 
@@ -69,7 +75,7 @@ namespace Application.Features.Tasks
                 UserId = user.Id,
                 UserName = user.UserName,
                 UserEmail = user.Email,
-                AssignedTasks = myAssignments.Select(tu => new TaskDetailsDto
+                AssignedTasks = userAssignments.Select(tu => new TaskDetailsDto
                 {
                     TaskId = tu.TaskId,
                     Title = tu.Task.Title,
@@ -79,6 +85,7 @@ namespace Application.Features.Tasks
                     DueDate = tu.Task.DueDate,
                     ClosedDate = tu.Task.ClosedDate, 
                     Status = tu.Task.Status.ToString(),
+                    Feedback =tu.Feedback,
                     
                     TaskUserAssignedDate = tu.AssignedDate,
                     UserClosedDate = tu.ClosedDate, 

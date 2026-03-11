@@ -17,7 +17,7 @@ namespace Presentation.Controllers.Core
             _userService = userService;
         }
 
-        [HttpGet("Users/GetAllUsers")]
+        [HttpGet("GetAllUsers")]
         public async Task<IActionResult> GetAllUsersAsync() 
         {
             
@@ -27,7 +27,7 @@ namespace Presentation.Controllers.Core
         
         }
 
-        [HttpGet("Users/GetUser/{id}")]
+        [HttpGet("GetUser/{id}")]
         public async Task<IActionResult> GetUserByIdAsync(int id)
         {
 

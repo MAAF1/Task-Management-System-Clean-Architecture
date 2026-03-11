@@ -1,0 +1,112 @@
+<!-- <div class="container mt-4">
+  <div class="card shadow p-4">
+    <h3>Create New Task</h3>
+    <hr>
+
+    @if (error) {
+      <div class="alert alert-danger">{{ error }}</div>
+    }
+
+    <form (ngSubmit)="createTask()">
+      <div class="mb-3">
+        <label class="form-label">Task Title</label>
+        <input type="text" class="form-control" [(ngModel)]="task.title" name="title" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea class="form-control" [(ngModel)]="task.description" name="description"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Due Date</label>
+        <input type="date" class="form-control" [(ngModel)]="task.dueDate" name="dueDate">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Assign Users (Hold Ctrl/Cmd to select multiple)</label>
+        <select 
+          multiple 
+          class="form-select" 
+          [(ngModel)]="task.assignedUserIds" 
+          name="assignedUsers"
+          style="height: 150px;">
+          
+          @for (user of allUsers; track user) {
+            <option [value]="user.id">
+              ({{ user.name }}) 
+            </option>
+          }
+        </select>
+        <small class="text-muted">Selected IDs: {{ task.assignedUserIds | json }}</small>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="loading">
+        @if (loading) {
+          <span class="spinner-border spinner-border-sm"></span> Creating...
+        } @else {
+          Create Task
+        }
+      </button>
+    </form>
+  </div>
+</div>
+ -->
+
+ <div class="admin-detail-wrapper py-5"> <div class="container custom-form-container">
+    
+    <div class="detail-header mb-4">
+      <h2 class="fw-bold m-0 text-dark">Create New Task</h2>
+      <p class="text-muted small">Fill in the details to deploy a new mission</p>
+    </div>
+
+    <div class="glass-card p-4"> <h5 class="section-title mb-4 text-primary">
+        <i class="bi bi-plus-circle-fill"></i> Task Specification
+      </h5>
+
+      @if (error) {
+        <div class="alert alert-danger rounded-3">{{ error }}</div>
+      }
+
+      <form (ngSubmit)="createTask()">
+        <div class="mb-4">
+          <label class="custom-label">Task Title</label>
+          <input type="text" class="custom-input" [(ngModel)]="task.title" name="title" placeholder="Enter task name..." required>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">Due Date</label>
+          <div class="date-input-wrapper">
+             <input type="date" class="custom-input" [(ngModel)]="task.dueDate" name="dueDate">
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">Description</label>
+          <textarea class="custom-input" rows="4" [(ngModel)]="task.description" name="description" placeholder="Describe the task..."></textarea>
+        </div>
+
+        <div class="mb-4">
+          <label class="custom-label">Assign Team Members (Hold Ctrl/Cmd)</label>
+          <select multiple class="custom-select" [(ngModel)]="task.assignedUserIds" name="assignedUsers">
+            @for (user of allUsers; track user.id) {
+              <option [value]="user.id">{{ user.name }}</option>
+            }
+          </select>
+          <div class="mt-2">
+             <small class="text-muted fw-bold">Selected IDs: </small>
+             <span class="badge bg-light text-primary border shadow-sm">{{ task.assignedUserIds | json }}</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-save-main px-5" [disabled]="loading">
+          @if (loading) {
+            <span class="spinner-border spinner-border-sm me-2"></span> Deploying...
+          } @else {
+            <i class="bi bi-rocket-takeoff me-2"></i> Create Task
+          }
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
