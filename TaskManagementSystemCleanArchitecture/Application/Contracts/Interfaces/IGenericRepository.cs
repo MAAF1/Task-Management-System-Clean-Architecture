@@ -10,8 +10,6 @@ namespace Application.Contracts.Interfaces
     public interface IGenericRepository<T> where T : class
     {
         Task<IEnumerable<T>> GetAllAsync();
-        Task<IEnumerable<T>> GetAllWithIncludesAsync(Func<IQueryable<T>, IQueryable<T>>? include = null);
-        Task<T> GetByIdWithIncludesAsync(int id, Func<IQueryable<T>, IQueryable<T>>? include = null);
         Task<T> GetByIdAsync(int id);
         Task AddAsync(T entity);
         void Update(T entity);

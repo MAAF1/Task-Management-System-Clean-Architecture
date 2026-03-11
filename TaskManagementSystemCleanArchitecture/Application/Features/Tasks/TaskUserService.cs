@@ -52,23 +52,9 @@ namespace Application.Features.Tasks
         {
             int currentUserId = int.Parse(_currentUserService.UserId!);
             var user = await _uow.GenericRepository<ApplicationUser>().GetByIdAsync(currentUserId);
-            if (user == null) return null;
-            var userAssignments = await _uow.GenericRepository<TaskUser>().GetAllWithIncludesAsync(
-            q => q
-            .Include(t => t.Task)
-            .ThenInclude(t => t.CreatedBy)
-            .Where(tu => tu.UserId == currentUserId)
+            var userAssignments = await _uow.TaskUserRepository().GetMytasksAsync(user.Id);
 
 
-
-            );
-
-           
-            if (!string.IsNullOrEmpty(searchTerm))
-            {
-               userAssignments = userAssignments.Where(tu =>
-                    tu.Task.Title.Contains(searchTerm, StringComparison.OrdinalIgnoreCase));
-            }
 
             return new UserTaskDetailsDto
             {

@@ -12,6 +12,7 @@ namespace Persistence.Repositories.Common
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _context;
+      
         public UnitOfWork(ApplicationDbContext context) => _context = context;
        
 
@@ -23,6 +24,7 @@ namespace Persistence.Repositories.Common
 
         public IGenericRepository<T> GenericRepository<T>() where T : class => new GenericRepository<T>(_context);
         public ITaskRepository TaskRepository() => new TaskRepository(_context);
+        public ITaskUserRepository TaskUserRepository() => new TaskUserRepository(_context);
 
     }
 }

@@ -10,6 +10,7 @@ namespace Application.Contracts.Interfaces
     {
         IGenericRepository<T> GenericRepository<T>() where T : class;
         ITaskRepository TaskRepository();
+        ITaskUserRepository TaskUserRepository();
 
         Task<int> CompleteAsync();
     }
